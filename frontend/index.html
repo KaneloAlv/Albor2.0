@@ -1,0 +1,235 @@
+<!DOCTYPE html> <!---->
+<html lang="es"> <!--indica que el contenido está en español-->
+<head> <!--Inicio de la sección <head>, donde se colocan configuraciones, enlaces a estilos, fuentes, scripts, etc.-->
+    <meta charset="UTF-8"> <!--Define la codificación de caracteres, UTF-8 soporta acentos y caracteres especiales en español-->   
+    <meta name="viewport" content="width=device-width, initial-scale=1"> <!--Hace que la página sea responsive (se adapte a móviles)-->
+    <title>Albor</title> <!--Título que aparece en la pestaña del navegador-->
+    <link rel="stylesheet" href="index.css"> <!--Enlaza a la hoja de estilos personalizada.-->
+    <link rel="preconnect" href="https://fonts.googleapis.com"> <!--Optimiza la carga de fuentes de Google.-->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Tenor+Sans&display=swap" rel="stylesheet"> <!--Importa dos familias de fuentes desde Google Fonts: EB Garamond y Tenor Sans.-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"> <!--Carga Bootstrap 5.3 para estilos y diseño responsive-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"> <!--Carga los íconos de Bootstrap Icons (por ejemplo: ícono de WhatsApp).-->
+
+
+
+</head> 
+
+<!--función para enviar mensaje a WhatsApp-->
+<script>
+  function enviarWhatsApp(event) {  //
+    event.preventDefault(); //Previene que el formulario se envíe por defecto.
+    const nombre = document.getElementById('nombre').value;
+    const email = document.getElementById('email').value;
+    const mensaje = document.getElementById('mensaje').value;
+
+    const texto = `Hola, soy ${nombre}.\nCorreo: ${email}\n\nMe gustaría cotizar lo siguiente:\n${mensaje}`; //Toma los valores del formulario
+    const numero = "573045760304";  // Crea el texto del mensaje
+    const enlace = `https://wa.me/${numero}?text=${encodeURIComponent(texto)}`; //Genera el enlace de WhatsApp y lo abre en una nueva pestaña
+
+    window.open(enlace, '_blank');
+  }
+</script>
+
+
+
+
+
+<body > <!--Comienza el contenido visible del sitio.-->
+
+    <header class="fondo-header d-flex flex-wrap align-items-center justify-content-between py-3 mb-1 header-custom-style px-3 px-md-4">
+        <div class="col-md-1.5 mb-2 mb-md-0">
+            <a href="#" class="d-inline-flex link-body-emphasis text-decoration-none">
+                <svg class="bi banner" width="60" height="60" role="img" aria-label="Bootstrap">
+                    <use xlink:href="#bootstrap"></use>
+                </svg>
+            </a>
+        </div>
+    
+        <ul class="nav col-md-auto mb-2 justify-content-center mb-md-0">
+            <li><a href="#" class="nav-link px-4 link-secondary2 header-link">Albor</a></li>
+            <li><a href="#productos" class="nav-link px-4 header-link">Productos</a></li>
+            <li><a href="#cotizacion" class="nav-link px-4 header-link">Cotización</a></li>
+            <li><a href="#contacto" class="nav-link px-4 header-link">Contáctanos</a></li>
+            <li><a href="../frontend/cuento/cuento.html" class="nav-link px-4 header-link">Crea tu cuento</a></li> </ul> 
+    
+        <div class="col-md-auto text-md-end">
+            <a href="/frontend/login/login.html" class="text-decoration-none">
+        <button type="button" class="btn btn-outline-primary me-md-2 custom-button outline">Iniciar sesión</button>
+            </a>
+            <a href="/frontend/register/register.html" class="text-decoration-none">
+        <button type="button" class="btn btn-primary custom-button primary">Regístrate</button>
+            </a>
+</div>
+    </header>
+    
+
+
+
+
+
+
+
+
+
+    <!--Es un carrusel que cambia imágenes automáticamente.Contiene prev y next: flechas para moverse entre slides-->
+    <div id="carouselExampleCaptions" class="carousel slide">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <div class="image-overlay-container">
+                    <img src="public/margarita.png" class="d-block w-100 hero-image" alt="...">
+                    <div class="image-overlay"></div>
+                </div>
+                <div class="carousel-caption d-none d-md-block font-text">
+                    <h5 class="custom-h5">Vela Margarita</h5>
+                    <p class="custom-p">Nuestra flor margarita en cera está hecha a mano con amor, ideal para decorar, regalar o simplemente llenar de belleza cualquier rincón. Una flor eterna que nunca se marchita..</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="image-overlay-container">
+                    <img src="public/virgen.png" class="d-block w-100 hero-image" alt="...">
+                    <div class="image-overlay"></div>
+                </div>
+                <div class="carousel-caption d-none d-md-block font-text">
+                    <h5 class="custom-h5">Virgen y rosa</h5>
+                    <p class="custom-p">Hermosa virgen y rosa en cera, con una base de madera natural. Una pieza llena de ternura y devoción, ideal para regalar o crear un rincón espiritual.</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="image-overlay-container">
+                    <img src="public/oso.png" class="d-block w-100 hero-image" alt="...">
+                    <div class="image-overlay"></div>
+                </div>
+                <div class="carousel-caption d-none d-md-block font-text">
+                    <h5 class="custom-h5">Osito y Rosa</h5>
+                    <p class="custom-p">Osito y rosa en cera, con un exquisito aroma. Incluye base de madera natural y stickers personalizables para que lo hagas único.</p>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+
+
+
+  
+    
+   <section id="productos" class="py-5 bg-white"> <!--Muestra productos dinámicamente usando JavaScript.-->
+    <div class="container">
+        <h2 class="section-title text-center fw-bold text-uppercase">Descubre Nuestras Colecciones</h2>
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4" id="productos-container">
+            </div>
+        <div class="text-center mt-4" id="ver-mas-container">
+            <button id="ver-mas-productos" class="btn btn-outline-secondary rounded-pill">Ver Más</button>
+        </div>
+    </div>
+</section>
+
+<!-- Formulario de contacto-->
+
+
+    <section id="contacto" class="container col-xxl-8 px-4 py-5">
+        <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+            <div class="col-10 col-sm-8 col-lg-6">
+                <img src="public/contactanos.png" class="d-block mx-lg-auto img-fluid" alt="Imagen de Contacto" width="400" height="300" loading="lazy">
+            </div>
+            <div class="col-lg-6">
+                <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3">¿Hablamos por WhatsApp?</h1>
+                <p class="lead">Haz clic en el botón de abajo para iniciar una conversación con nosotros a través de WhatsApp.</p>
+                <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+                    <a href="https://wa.me/3045760304" target="_blank" class="btn btn-success btn-lg px-4 me-md-2 btn-wpp">
+                        <i class="bi bi-whatsapp me-2"></i> Chatea con nosotros
+                    </a>
+                </div>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.046384955447!2d-75.614760924184!3d6.2576203261942585!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e44297b01b9c6d3%3A0x3fff08639ce9d3b7!2sCra.%2096%20%23%2047A-133%2C%20San%20Javier%20II%2C%20Medellín%2C%20San%20Javier%2C%20Medellín%2C%20Antioquia!5e0!3m2!1ses!2sco!4v1746923700275!5m2!1ses!2sco" width="500" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </section>
+
+
+<!-- Formulario de cotización-->
+
+<section id="cotizacion" class="py-5 bg-light">
+    <div class="container">
+        <h2 class="mb-4 fw-bold text-uppercase text-h2">Solicita tu Cotización</h2>
+        <div class="row justify-content-center">
+            <div class="col-md-6"> <form class="form-cotizacion" onsubmit="enviarWhatsApp(event)">
+                    <div class="mb-3 ">
+                        <label for="nombre" class="form-label">Nombre</label>
+                        <input type="text" class="form-control" id="nombre" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Correo electrónico</label>
+                        <input type="email" class="form-control" id="email" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="mensaje" class="form-label">Detalles</label>
+                        <textarea class="form-control" id="mensaje" rows="3" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-success btn-sm">
+                        <i class="bi bi-whatsapp me-1"></i> Enviar por WhatsApp
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+    
+
+
+
+
+
+
+    <footer class="bg-light text-center text-lg-start mt-5 border-top">
+  <div class="footer-prueba">
+    <div class="row">
+      <!-- Sección de texto -->
+      <div class="col-lg-4 col-md-4 mb-4 mb-md-0 text-center">
+        <h5 class="text-uppercase h5-text">Albor</h5>
+        <p class="p-text">Gracias por visitarnos. Si tienes dudas, contáctanos por WhatsApp o correo.</p>
+      </div>
+
+      <!-- Sección de contacto -->
+      <div class="col-lg-4 col-md-4 mb-4 mb-md-0 text-center">
+        <h5 class="text-uppercase h5-text">Contacto</h5>
+        <ul class="list-unstyled mb-0">
+          <li><a href="mailto:danylopera14@gmail.com" class="text-dark p-text">danylopera14@gmail.com</a></li>
+          <li><a href="https://wa.me/573045760304" target="_blank" class="text-dark p-text">WhatsApp</a></li>
+        </ul>
+      </div>
+
+      <!-- Redes sociales -->
+      <div class="col-lg-4 col-md-4 mb-4 mb-md-0 text-center">
+        <h5 class="text-uppercase h5-text">Síguenos</h5>
+        <a href="https://facebook.com" class="me-3 text-dark" target="_blank"><i class="bi bi-facebook fs-4"></i></a>
+        <a href="https://www.instagram.com/albor.velasydetalles?igsh=bmFjc3MxYWkycTkz" class="me-3 text-dark" target="_blank"><i class="bi bi-instagram fs-4"></i></a>
+
+        <a href="https://www.tiktok.com/@albor.velas.y.det?_t=ZS-8wFfLoLNOps&_r=1" class="text-dark" target="_blank"><i class="bi bi-tiktok fs-4"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="text-center p-3 footer-copyright">
+  © 2025 Albor. Todos los derechos reservados.
+</div>
+
+</footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="./index.js"></script>
+</body>
+</html>

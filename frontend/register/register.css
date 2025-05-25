@@ -1,0 +1,66 @@
+html,
+body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    background-color: #f0f2f5; /* Un color de fondo suave */
+}
+
+.form-registration {
+    max-width: 330px;
+    padding: 15px;
+    margin: 0 auto;
+}
+
+.form-registration .form-floating:focus-within {
+    z-index: 2;
+}
+
+/* Estilos específicos para los campos de registro */
+.form-registration .form-floating:nth-child(2) { /* Nombre */
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+.form-registration .form-floating:nth-child(3) { /* Email */
+    border-radius: 0;
+}
+
+.form-registration .form-floating:nth-child(4) { /* Contraseña */
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    margin-bottom: -1px;
+}
+
+.form-registration .form-floating:nth-child(5) { /* Confirmar Contraseña */
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    margin-bottom: 10px;
+}
+
+
+.bi {
+    vertical-align: -.125em;
+    fill: currentColor;
+}
+
+.btn-primary {
+    --bs-btn-bg: #530a58; /* Un tono similar a tu diseño */
+    --bs-btn-hover-bg: #3d0740;
+    --bs-btn-border-color: #530a58;
+    --bs-btn-hover-border-color: #3d0740;
+}
+
+.banner {
+    background-image: url(/frontend/public/Logo-Albor.png);
+    background-size:cover;
+    z-index: 1;
+    background-position:center;
+    filter: brightness(0.6);
+    border:none;
+}

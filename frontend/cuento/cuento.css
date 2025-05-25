@@ -1,0 +1,318 @@
+
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Tenor+Sans&display=swap');
+/* Estilos generales */
+.cuento-generador {
+    font-family:"Garamond", serif;
+    background-color: #ffffffb2; /* Fondo tipo pergamino */
+    min-height: 100vh;
+    padding: 20px 0;
+}
+
+/* Estilos del formulario */
+.formulario-seccion {
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(4px); 
+    background-color: #b26cdb8a;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    border: 1px solid #0a000a88; /* Borde dorado */
+}
+
+.formulario-seccion:hover {
+    box-shadow: 0 6px 12px rgba(212, 108, 238, 0.15);
+}
+
+/* Estilos del resultado - Estilo pergamino antiguo */
+.resultado-seccion {
+    background-color: #d781df; /* Color pergamino */
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 1px solid #4a0f58; /* Borde dorado */
+    position: relative;
+}
+
+.btn-perso { 
+    --bs-btn-color: #ffffff !important;
+    margin-top: 20px !important;
+    --bs-btn-hover-bg: #b26cdb8a !important;
+    --bs-btn-color: #0d6efd;
+    --bs-btn-border-color: #ffffff;
+    --bs-btn-hover-color: #fff;
+    --bs-btn-hover-bg: #0d6efd;
+    --bs-btn-hover-border-color: #0d6efd;
+    --bs-btn-disabled-bg: #0d6efd !important;
+} 
+
+.cuento-generado {
+    background-color: rgba(248, 244, 232, 0.7); /* Semi-transparente */
+    border-left: 5px solid #521f5c; /* Borde dorado */
+    padding: 25px;
+    font-size: 1.2rem;
+    line-height: 1.8;
+    text-align: justify;
+    white-space: pre-line;
+    min-height: 250px;
+    position: relative;
+   font-family:"Garamond", serif;
+    color: #3a3226; /* Color tinta antigua */
+}
+
+/* Estilo para el cursor de la máquina de escribir */
+.cursor {
+    display: inline-block;
+    width: 10px;
+    height: 1.4rem;
+    background-color: #86c2e6; /* Color dorado */
+    animation: blink 1s infinite;
+    vertical-align: middle;
+    margin-left: 2px;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+/* Estilos para los botones con temática medieval */
+.btn-primary {
+    background-color: #8b4513; /* Marrón oscuro */
+    border-color: #6b3300;
+    font-family:"Garamond", serif;
+    font-weight: bold;
+}
+
+.btn-primary:hover {
+    background-color: #6b3300;
+    border-color: #5a2900;
+}
+
+.btn-outline-primary {
+    color: #138b13;
+    border-color: #8b4513;
+    font-family:"Garamond", serif;
+    font-weight: bold;
+}
+
+.btn-outline-primary:hover {
+    background-color: #8b4513;
+    color: white;
+}
+
+/* Efecto de transición al mostrar el resultado */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.resultado-seccion.mostrar {
+    animation: fadeIn 0.5s ease-out forwards;
+    display: block !important;
+}
+
+/* Fuente de fantasía  */
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=MedievalSharp&display=swap');
+
+.titulo-fantasia {
+    font-family:"Garamond", serif;
+    color: #5a3921;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+}
+
+
+/* Estilo mágico para el botón Generar Cuento */
+.btn-primary {
+    background: linear-gradient(135deg, #9c27b0, #673ab7);
+    border: none;
+    color: white;
+    font-family:"Garamond", serif;
+    font-weight: bold;
+    font-size: 1.1rem;
+    padding: 12px 30px;
+    border-radius: 50px;
+    transition: all 0.4s ease;
+    box-shadow: 0 4px 15px rgba(156, 39, 176, 0.4);
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    border: 2px solid transparent;
+}
+
+.btn-primary:hover {
+    background: linear-gradient(135deg, #673ab7, #9c27b0);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(156, 39, 176, 0.6);
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+.btn-primary:active {
+    transform: translateY(1px);
+    box-shadow: 0 4px 10px rgba(156, 39, 176, 0.6);
+}
+
+/* Efecto de partículas mágicas al pasar el mouse */
+.btn-primary::before {
+    content: '';
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    right: -20px;
+    bottom: -20px;
+    background: radial-gradient(circle, rgba(255,255,255,0.8) 0%, rgba(255,255,255,0) 70%);
+    opacity: 0;
+    transition: all 0.5s;
+    mix-blend-mode: overlay;
+}
+
+.btn-primary:hover::before {
+    opacity: 0.6;
+    transform: scale(1.1);
+}
+
+/* Estilo mágico para los botones Regresar */
+.btn-outline-primary {
+    background: transparent;
+    color: #9c27b0;
+    border: 2px solid #9c27b0;
+    font-family:"Garamond", serif;
+    font-weight: bold;
+    font-size: 1rem;
+    padding: 10px 25px;
+    border-radius: 50px;
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(156, 39, 176, 0.2);
+    letter-spacing: 1px;
+}
+
+.btn-outline-primary:hover {
+    background: rgba(156, 39, 176, 0.1);
+    color: #7b1fa2;
+    border-color: #7b1fa2;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(156, 39, 176, 0.3);
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+}
+
+.btn-outline-primary::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transform: translateX(-100%);
+    transition: transform 0.6s;
+}
+
+.btn-outline-primary:hover::after {
+    transform: translateX(100%);
+}
+
+/* Estilo para el botón grande */
+.btn-lg {
+    padding: 14px 35px;
+    font-size: 1.2rem;
+    border-radius: 50px;
+}
+
+/* Efecto de brillo pulsante para el botón principal */
+@keyframes pulse {
+    0% { box-shadow: 0 0 0 0 rgba(156, 39, 176, 0.7); }
+    70% { box-shadow: 0 0 0 10px rgba(156, 39, 176, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(156, 39, 176, 0); }
+}
+
+.btn-primary.pulse {
+    animation: pulse 2s infinite;
+}
+
+/* Iconos mágicos */
+.btn-icon {
+    margin-right: 10px;
+    transition: all 0.3s;
+}
+
+.btn-primary:hover .btn-icon {
+    transform: rotate(10deg) scale(1.1);
+    text-shadow: 0 0 8px white;
+}
+
+.btn-outline-primary:hover .btn-icon {
+    transform: translateX(-3px);
+}
+/* Agrega esto al final del archivo CSS */
+.hada-madrina {
+  position: absolute;
+  top: -100px;
+  right: -60px;
+  z-index: 1000;
+  transform: scale(0);
+  transition: transform 0.5s ease-out;
+  pointer-events: none;
+}
+
+.hada-madrina.visible {
+  transform: scale(1);
+}
+
+.hada-madrina img {
+  width: 150px;
+  height: auto;
+  filter: drop-shadow(0 0 10px rgba(255, 215, 0, 0.7));
+  animation: float 3s ease-in-out infinite, sparkle 2s infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-20px); }
+}
+
+@keyframes sparkle {
+  0% { filter: drop-shadow(0 0 10px rgba(255, 215, 0, 0.7)); }
+  50% { filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.9)); }
+  100% { filter: drop-shadow(0 0 10px rgba(255, 215, 0, 0.7)); }
+}
+
+.hada-magica {
+  animation: magia 0.5s ease-in-out;
+}
+
+@keyframes magia {
+  0% { transform: scale(1); }
+  25% { transform: scale(1.1) rotate(10deg); }
+  50% { transform: scale(0.9) rotate(-10deg); }
+  75% { transform: scale(1.05) rotate(5deg); }
+  100% { transform: scale(1) rotate(0); }
+}
+
+
+
+.btn-success {
+    background-color: #25D366;
+    border-color: #1ebe5d;
+    color: white;
+    font-family:"Garamond", serif;
+    font-weight: bold;
+    font-size: 1rem;
+    padding: 10px 25px;
+    border-radius: 50px;
+    transition: all 0.4s ease;
+    box-shadow: 0 2px 10px rgba(37, 211, 102, 0.3);
+}
+
+.btn-success:hover {
+    background-color: #1ebe5d;
+    box-shadow: 0 5px 15px rgba(37, 211, 102, 0.4);
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.6);
+}
+
+.btn-success .btn-icon {
+    margin-right: 10px;
+}
