@@ -1,0 +1,104 @@
+<!DOCTYPE html> <!---->
+<html lang="es"> <!--indica que el contenido está en español-->
+<head> <!--Inicio de la sección <head>, donde se colocan configuraciones, enlaces a estilos, fuentes, scripts, etc.-->
+    <meta charset="UTF-8"> <!--Define la codificación de caracteres, UTF-8 soporta acentos y caracteres especiales en español-->   
+    <meta name="viewport" content="width=device-width, initial-scale=1"> <!--Hace que la página sea responsive (se adapte a móviles)-->
+    <title>Albor</title> <!--Título que aparece en la pestaña del navegador-->
+    <link rel="stylesheet" href="index.css"> <!--Enlaza a la hoja de estilos personalizada.-->
+    <link rel="preconnect" href="https://fonts.googleapis.com"> <!--Optimiza la carga de fuentes de Google.-->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Tenor+Sans&display=swap" rel="stylesheet"> <!--Importa dos familias de fuentes desde Google Fonts: EB Garamond y Tenor Sans.-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"> <!--Carga Bootstrap 5.3 para estilos y diseño responsive-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"> <!--Carga los íconos de Bootstrap Icons (por ejemplo: ícono de WhatsApp).-->
+
+
+
+</head> 
+<body>
+<!-- Formulario de cotización-->
+<section id="cotizacion" class="py-5 bg-light">
+    <div class="container">
+        <h2 class="mb-4 fw-bold text-uppercase text-h2">Solicita tu Cotización</h2>
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <form id="form-cotizacion" class="form-cotizacion">
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <label for="nombre" class="form-label">Nombres y Apellidos*</label>
+                            <input type="text" class="form-control" id="nombre" required>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label for="ciudad" class="form-label">Ciudad*</label>
+                            <select class="form-select" id="ciudad" required>
+                                <option value="" selected disabled>Selecciona tu ciudad</option>
+                                <option value="Medellín">Medellín</option>
+                                <option value="Bogotá">Bogotá</option>
+                                <option value="Cali">Cali</option>
+                                <option value="Barranquilla">Barranquilla</option>
+                                <option value="Cartagena">Cartagena</option>
+                                <option value="Otra">Otra</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <label for="direccion" class="form-label">Dirección*</label>
+                            <input type="text" class="form-control" id="direccion" required>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label for="celular" class="form-label">Celular*</label>
+                            <input type="tel" class="form-control" id="celular" required>
+                        </div>
+                    </div>
+                    
+                    <div class="mb-3">
+                        <label class="form-label">Productos de interés*</label>
+                        <div class="productos-container border p-3 rounded">
+                            <div class="row">
+                                <!-- Los productos se agregarán dinámicamente con JavaScript -->
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mb-3">
+                        <label for="mensaje" class="form-label">Observaciones adicionales</label>
+                        <textarea class="form-control" id="mensaje" rows="3"></textarea>
+                    </div>
+                    
+                    <div class="d-flex justify-content-between">
+                        <button type="button" id="cancelar-cotizacion" class="btn btn-outline-secondary">
+                            Cancelar
+                        </button>
+
+                        <button type="submit" class="btn btn-success">
+                            <i class="bi bi-whatsapp me-1"></i> Enviar cotización
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Modal para mostrar la cotización -->
+<div class="modal fade" id="cotizacionModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Resumen de tu cotización</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body" id="resumen-cotizacion">
+                <!-- Contenido generado dinámicamente -->
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                <button type="button" id="confirmar-cotizacion" class="btn btn-primary">Confirmar pedido</button>
+            </div>
+        </div>
+    </div>
+</div>
+    <script src="Cotizacion.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

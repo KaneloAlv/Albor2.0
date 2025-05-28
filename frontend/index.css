@@ -356,3 +356,22 @@ header {
 .precioActual{
   color: #2600ff;
 }
+
+/* Estilos para los productos en el formulario de cotización */
+.productos-container {
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+.productos-container .form-check-label {
+    cursor: pointer;
+    padding-left: 5px;
+}
+
+.productos-container .form-check-input {
+    cursor: pointer;
+}
+
+.cantidad-container {
+    margin-left: 25px;
+}
