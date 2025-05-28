@@ -199,7 +199,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Manejar el botón de cancelar
     document.getElementById('cancelar-cotizacion').addEventListener('click', function() {
-        window.location.href = '../frontend/index.html'; // Redirigir a la página principal
+        window.location.href = '../index.html';
     });
 });
 
